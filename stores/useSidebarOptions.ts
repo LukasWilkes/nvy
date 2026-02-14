@@ -14,6 +14,8 @@ export type TEffects = {
       brightness: number
       contrast: number
       invert: boolean
+      shadows: string
+      highlights: string
     }
   }
 }
@@ -30,6 +32,8 @@ export const Effects = {
       brightness: 0,
       contrast: 1,
       invert: false,
+      shadows: '#000000',
+      highlights: '#ffffff',
     },
   },
 }

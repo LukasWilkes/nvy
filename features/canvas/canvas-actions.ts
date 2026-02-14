@@ -71,7 +71,7 @@ export const handleWheel = (
 
 export const applyEffects = async (
   p5: P5CanvasInstance<TSettings>,
-  currentProps: TBaseProps,
+  currentProps: TBaseProps & { imageFormat: 'png' | 'jpg' },
   img: any
 ) => {
   const settings: any =
@@ -91,16 +91,11 @@ export const applyEffects = async (
         img.loadPixels()
         const variant = currentProps?.variant
         if (variant === 'standard') {
-          const { contrast, brightness, invert, threshold } =
-            settings[variant as keyof typeof settings]
-
-          const formattedDitherSettings = {
-            threshold,
-            contrast,
-            brightness,
-            invert,
-          }
-          ditherServcie[variant](img, formattedDitherSettings)
+          ditherServcie[variant](
+            img,
+            settings[variant as keyof typeof settings],
+            currentProps?.imageFormat
+          )
         }
         break
       default:

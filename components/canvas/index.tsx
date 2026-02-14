@@ -72,7 +72,11 @@ const sketch: Sketch<TSettings> = (p5) => {
 
     if (img) {
       let tempImg = img.get()
-      applyEffects(p5, baseProps, tempImg)
+      applyEffects(
+        p5,
+        { ...baseProps, imageFormat: viewPortProps?.imageFormat },
+        tempImg
+      )
     }
 
     p5.pop()

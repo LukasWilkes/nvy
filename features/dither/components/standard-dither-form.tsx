@@ -2,8 +2,8 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Field, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
+import { HexCodeColorToRGB, RGBColorToHexCode } from '@/lib/utils'
 import useSidebarOptions from '@/stores/useSidebarOptions'
-import React from 'react'
 
 type Props = {}
 
@@ -112,6 +112,26 @@ const StandardDitherForm = (props: Props) => {
           onCheckedChange={(checked) => {
             updateStandardDither('invert', checked)
           }}
+        />
+      </Field>
+      <Field>
+        <FieldLabel>Schatten</FieldLabel>
+        <Input
+          onChange={(e) => {
+            updateStandardDither('shadows', e.target.value)
+          }}
+          defaultValue={standardThresholdDither?.shadows}
+          type={'color'}
+        />
+      </Field>
+      <Field>
+        <FieldLabel>Highlights</FieldLabel>
+        <Input
+          onChange={(e) => {
+            updateStandardDither('highlights', e.target.value)
+          }}
+          defaultValue={standardThresholdDither?.highlights}
+          type={'color'}
         />
       </Field>
     </div>
