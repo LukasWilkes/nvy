@@ -2,7 +2,6 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Field, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
-import { HexCodeColorToRGB, RGBColorToHexCode } from '@/lib/utils'
 import useSidebarOptions from '@/stores/useSidebarOptions'
 
 type Props = {}
@@ -24,8 +23,7 @@ const StandardDitherForm = (props: Props) => {
       <div>
         <h6 className="font-bold mb-2">Standard Threshold Dithering</h6>
         <p className="text-xs opacity-80">
-          Classifies the average Brightness of the pixels and assigns either the
-          colors black or white.
+          Berechnung auf Basis der durchschnittlichen Helligkeit.
         </p>
       </div>
       <Field>
@@ -36,8 +34,6 @@ const StandardDitherForm = (props: Props) => {
             type={'number'}
             value={standardThresholdDither?.threshold}
             onChange={(e) => {
-              const value = Number(e.target.value)
-
               updateStandardDither('threshold', Number(e.target.value))
             }}
           />
@@ -102,21 +98,12 @@ const StandardDitherForm = (props: Props) => {
           }}
         />
       </Field>
-      <Field className="flex-row justify-between w-full">
-        <FieldLabel>
-          <span>Invertieren:</span>
-        </FieldLabel>
-        <Checkbox
-          className="size-6 !w-6 rounded-none"
-          checked={standardThresholdDither?.invert}
-          onCheckedChange={(checked) => {
-            updateStandardDither('invert', checked)
-          }}
-        />
-      </Field>
-      <Field>
-        <FieldLabel>Schatten</FieldLabel>
+
+      <Field className="flex-row">
+        <FieldLabel htmlFor="shadows">Schatten</FieldLabel>
         <Input
+          className="!w-10 !p-1 !py-1"
+          id="shadows"
           onChange={(e) => {
             updateStandardDither('shadows', e.target.value)
           }}
@@ -124,14 +111,30 @@ const StandardDitherForm = (props: Props) => {
           type={'color'}
         />
       </Field>
-      <Field>
-        <FieldLabel>Highlights</FieldLabel>
+      <Field className="flex flex-row">
+        <FieldLabel htmlFor="highlights">Highlights</FieldLabel>
         <Input
+          className="!w-10 !p-1 !py-1"
+          id="highlights"
           onChange={(e) => {
             updateStandardDither('highlights', e.target.value)
           }}
           defaultValue={standardThresholdDither?.highlights}
           type={'color'}
+        />
+      </Field>
+
+      <Field className="flex-row justify-between w-full">
+        <FieldLabel htmlFor="invert">
+          <span>Invertieren:</span>
+        </FieldLabel>
+        <Checkbox
+          id="invert"
+          className="size-6 !w-6 rounded-none"
+          checked={standardThresholdDither?.invert}
+          onCheckedChange={(checked) => {
+            updateStandardDither('invert', checked)
+          }}
         />
       </Field>
     </div>

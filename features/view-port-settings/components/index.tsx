@@ -17,7 +17,6 @@ const ViewPortOptions = () => {
       <div className="flex gap-4 w-full">
         <ImageUpload />
         <ExportImage />
-        <CanvasSettings />
       </div>
     </div>
   )
