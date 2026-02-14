@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nvy.app // v.0.1 - Dithering Image Tool
 
-## Getting Started
+Ein minimalistisches, browserbasiertes Werkzeug zur Bildmanipulation, das verschiedene Dithering-Algorithmen nutzt, um einen einzigartigen Retro-Look zu erzeugen.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Dithering Algorithmen:** Standard Threshold Dithering mit state basierter Anpassung.
+- **Tint Effect:** Tönungs Effekt mit der ausgewählten Farbe.
+- **Pro-Artboard:** Ein interaktives Artboard mit Zoom-to-Center und Panning.
+- **Shortcuts:** Schneller Workflow durch Tastaturbefehle (Zoom, Fit-to-View).
+- **Privacy First:** Alle Berechnungen finden lokal im Browser statt. Es werden keine Bilder auf Server hochgeladen.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Grafik:** [p5.js](https://p5js.org/) für Canvas-Rendering und Pixel-Manipulation
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) (Tailwind CSS)
+- **Deployment:** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Lokale Installation
 
-## Learn More
+1. Repository klonen: `git clone https://github.com/LukasWilkes/nvy.git`
+2. Abhängigkeiten installieren: `npm install`
+3. Entwicklungsserver starten: `npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Key Learnings
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In diesem Projekt ging es mir vor allem darum neue interessante Dinge auszuprobieren und in meine bereits bekannten Workflows einzuarbeiten. Insbesondere die Verknüpfung von dem React Zustand State mit der p5.js Library war dabei interessant zu verfolgen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
