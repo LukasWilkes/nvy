@@ -1,8 +1,13 @@
 import Link from 'next/link'
+import cn from 'classnames'
 
-const Logo = () => {
+type TLogo = {
+  className?: string
+}
+
+const Logo = ({ className }: TLogo) => {
   return (
-    <Link href={'/'}>
+    <Link className={cn('', className)} href={'/'}>
       <svg
         className="fill-foreground size-9"
         width="44"

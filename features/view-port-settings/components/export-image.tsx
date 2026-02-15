@@ -45,21 +45,22 @@ const ExportImage = (props: Props) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger className="" asChild>
         <Button>
-          Export <Share />
+          <span className="sr-only md:not-sr-only">Export</span>
+          <Share />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md font-mono text-foreground">
         <DialogHeader>
-          <DialogTitle>Export Image</DialogTitle>
+          <DialogTitle>Bild exportieren</DialogTitle>
           <DialogDescription>
-            How would you like to export your Image?
+            Wie möchtest du dein Bild speichern?
           </DialogDescription>
         </DialogHeader>
         <FieldGroup>
           <Field>
-            <Label htmlFor="name-1">Filename</Label>
+            <Label htmlFor="name-1">Dateiname</Label>
             <Input
               id="name-1"
               name="name"
@@ -73,7 +74,7 @@ const ExportImage = (props: Props) => {
             />
           </Field>
           <Field>
-            <Label htmlFor="username-1">Username</Label>
+            <Label htmlFor="username-1">Bildformat</Label>
             <Select
               defaultValue={viewPortSettings?.imageFormat}
               onValueChange={(value) => {
@@ -95,7 +96,7 @@ const ExportImage = (props: Props) => {
         </FieldGroup>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outline">Cancel Export</Button>
+            <Button variant="outline">Export abbrechen</Button>
           </DialogClose>
           <Button
             onClick={() => {
@@ -108,7 +109,7 @@ const ExportImage = (props: Props) => {
             }}
             type="submit"
           >
-            <span>{save ? 'Exporting Image' : 'Export Image'}</span>
+            <span>{save ? 'Exportiere Bild' : 'Bild exportieren'}</span>
           </Button>
         </DialogFooter>
       </DialogContent>

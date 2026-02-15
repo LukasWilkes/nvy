@@ -18,10 +18,10 @@ const TintOptionsForm = ({ type }: TTintOptionsForm) => {
 
   return (
     <>
-      <div className="px-4 flex items-center h-16 border-b">
+      <div className="px-4 hidden md:flex  items-center h-16 border-b">
         <h6 className="font-bold">Tint Effekt:</h6>
       </div>
-      <div className="p-4">
+      <div className="py-4 md:p-4">
         <ColorPicker color={tintSettings?.color} effectType={type} />
       </div>
     </>

@@ -49,14 +49,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="h-svh hidden xl:flex">
+          <main className="h-svh flex">
             <Suspense>
               <Sidebar />
               <section className="w-full">{children}</section>
               <Options />
             </Suspense>
           </main>
-          <main className=" text-foreground h-svh flex-col px-8 w-screen font-mono flex xl:hidden justify-center items-center">
+          {/* <main className=" text-foreground h-svh flex-col px-8 w-screen font-mono flex xl:hidden justify-center items-center">
             <div className="h-full flex flex-col items-center justify-center">
               <Logo />
               <p className="text-center mx-auto mt-4 max-w-sm text-sm">
@@ -68,7 +68,7 @@ export default function RootLayout({
               <Link href={'/impressum'}>Impressum</Link>
               <Link href={'/datenschutz'}>Datenschutz</Link>
             </div>
-          </main>
+          </main> */}
         </ThemeProvider>
       </body>
     </html>

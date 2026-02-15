@@ -3,11 +3,11 @@ import { Field, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
 import useSidebarOptions from '@/stores/useSidebarOptions'
+import { useState } from 'react'
 
-type Props = {}
-
-const StandardDitherForm = (props: Props) => {
+const StandardDitherForm = () => {
   const { settings, updateSettings } = useSidebarOptions()
+
   const standardThresholdDither = settings['dither']?.standard
 
   const updateStandardDither = (option: string, value: any) => {
@@ -18,6 +18,7 @@ const StandardDitherForm = (props: Props) => {
     }, 100)
   }
 
+  const [test, setTest] = useState([0, 63, 127, 191, 255])
   return (
     <div className="flex flex-col gap-8 font-mono">
       <div>
@@ -98,7 +99,6 @@ const StandardDitherForm = (props: Props) => {
           }}
         />
       </Field>
-
       <Field className="flex-row">
         <FieldLabel htmlFor="shadows">Schatten</FieldLabel>
         <Input
@@ -123,7 +123,6 @@ const StandardDitherForm = (props: Props) => {
           type={'color'}
         />
       </Field>
-
       <Field className="flex-row justify-between w-full">
         <FieldLabel htmlFor="invert">
           <span>Invertieren:</span>

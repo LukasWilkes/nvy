@@ -6,9 +6,11 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
-import ImageUpload from './fields/image-upload'
 
-const MAP_PARAMS_TO_OPTIONS: Record<TEffectType, React.ComponentType<any>> = {
+export const MAP_PARAMS_TO_OPTIONS: Record<
+  TEffectType,
+  React.ComponentType<any>
+> = {
   tint: TintOptionsForm,
   dither: DitherOptionsForm,
 }

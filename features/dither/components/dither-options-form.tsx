@@ -19,12 +19,7 @@ const MAP_DITHER_TYPE_TO_FORM = {
 }
 
 const DitherOptionsForm = ({ type }: TDitherOptionsForm) => {
-  const { updateImageUrl, settings, effectVariant } = useSidebarOptions(
-    (state) => state
-  )
-  const ditherSettings = settings[
-    type as keyof typeof settings
-  ] as TEffects['dither']
+  const { effectVariant } = useSidebarOptions((state) => state)
 
   if (!Object.keys(MAP_DITHER_TYPE_TO_FORM).includes(effectVariant)) {
     return null
@@ -37,10 +32,10 @@ const DitherOptionsForm = ({ type }: TDitherOptionsForm) => {
 
   return (
     <>
-      <div className="h-16 flex-none border-b px-4 flex items-center">
+      <div className="h-16 flex-none border-b px-4 hidden md:flex items-center">
         <h6 className="font-bold">Dither Algorithmen</h6>
       </div>
-      <div className="px-4 py-4">
+      <div className="md:px-4 py-4">
         <Component />
       </div>
     </>

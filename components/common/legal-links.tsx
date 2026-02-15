@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const LegalLink = () => {
   return (
-    <div className="p-4 border-t mt-auto">
+    <div className="py-4 md:p-4 border-t mt-auto">
       <ul className="p-4 flex justify-between flex-col gap-2 text-sm border bg-input/30">
         <li>
           <Link
