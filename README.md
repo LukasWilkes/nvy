@@ -1,5 +1,9 @@
 # nvy.app // v.0.1 - Dithering Image Tool
 
+
+<img width="1080" height="720" alt="example" src="https://github.com/user-attachments/assets/7f53c8ec-1e69-41f5-8d60-027fc5649b58" />
+
+
 Ein minimalistisches, browserbasiertes Werkzeug zur Bildmanipulation, das verschiedene Dithering-Algorithmen nutzt, um einen einzigartigen Retro-Look zu erzeugen. Insbesondere um Zeichnungen mit Hilfe des Dither Algorithmus in Tattoo-Stencils zu verarbeiten
 
 ## Features
@@ -31,3 +35,5 @@ In diesem Projekt ging es mir vor allem darum neue interessante Dinge auszuprobi
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+
