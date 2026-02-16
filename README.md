@@ -33,6 +33,13 @@ Ein minimalistisches, browserbasiertes Werkzeug zur Bildmanipulation, das versch
 
 In diesem Projekt ging es mir vor allem darum neue interessante Dinge auszuprobieren und in meine bereits bekannten Workflows einzuarbeiten. Insbesondere die Verknüpfung von dem React Zustand State mit der p5.js Library war dabei interessant zu verfolgen.
 
+## Die nächsten Features
+
+- [ ] PNG-Support inklusive für Bilder mit transparentem Hintegrund.
+- [ ] Implementierung von weiteren Ditering Algorithmen.
+- [ ] Implementierung von zoomen und scalen im Artboard in der responsive Version.
+- [ ] Verbesserung der generellen Performance auch für größere Bilder als momentan erlaubt sind.
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
