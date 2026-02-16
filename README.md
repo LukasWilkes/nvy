@@ -1,5 +1,5 @@
 # nvy.app // v.0.1
-[🔗 Live Demo anschauen](https://deine-app.vercel.app)
+[🔗 Live Demo anschauen](https://nvy-iota.vercel.app)
 
 
 <img width="1080" height="720" alt="example" src="https://github.com/user-attachments/assets/7f53c8ec-1e69-41f5-8d60-027fc5649b58" />
