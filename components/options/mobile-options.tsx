@@ -1,16 +1,15 @@
-import { Menu, MenuIcon, Settings, Settings2, XIcon } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import SidebarNav from '@/components/sidebar/sidebar-nav'
-
-import StandardDitherForm from '@/features/dither/components/standard-dither-form'
-
 import { useEffect, useState } from 'react'
 import { useWindowSize } from 'usehooks-ts'
 import { useSearchParams } from 'next/navigation'
-import LegalLink from '../common/legal-links'
-import MapOptions from './map-options'
+
+import { MenuIcon, Settings, XIcon } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import { ScrollArea } from '@/components/ui/scroll-area'
+
+import SidebarNav from '@/components/sidebar/sidebar-nav'
+import LegalLink from '@/components/common/legal-links'
+import MapOptions from '@/components/options/map-options'
 
 const MobileSettings = () => {
   const { width } = useWindowSize()

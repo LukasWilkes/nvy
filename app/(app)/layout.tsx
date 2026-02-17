@@ -2,6 +2,7 @@ import Logo from '@/components/common/logo'
 import Options from '@/components/options'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import Sidebar from '@/components/sidebar'
+import { Toaster } from '@/components/ui/sonner'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import Link from 'next/link'
@@ -49,6 +50,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           <main className="h-svh flex">
             <Suspense>
               <Sidebar />
@@ -56,19 +58,6 @@ export default function RootLayout({
               <Options />
             </Suspense>
           </main>
-          {/* <main className=" text-foreground h-svh flex-col px-8 w-screen font-mono flex xl:hidden justify-center items-center">
-            <div className="h-full flex flex-col items-center justify-center">
-              <Logo />
-              <p className="text-center mx-auto mt-4 max-w-sm text-sm">
-                nvy is a high-precision tool designed for larger displays.
-                Mobile support is coming soon.
-              </p>
-            </div>
-            <div className="flex gap-8 text-sm pb-8">
-              <Link href={'/impressum'}>Impressum</Link>
-              <Link href={'/datenschutz'}>Datenschutz</Link>
-            </div>
-          </main> */}
         </ThemeProvider>
       </body>
     </html>

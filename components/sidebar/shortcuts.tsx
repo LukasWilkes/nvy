@@ -1,13 +1,47 @@
-import { ChevronUp } from 'lucide-react'
-import React, { useState } from 'react'
+'use client'
+import { ChevronUp, Command } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import cn from 'classnames'
 import { Button } from '../ui/button'
 import { Kbd } from '../ui/kbd'
 
-type Props = {}
+type TShortcut = {
+  name: string
+  keys: string[]
+}
 
-const Shortcuts = (props: Props) => {
+const SHORTCUTS: TShortcut[] = [
+  {
+    name: 'Zoom in',
+    keys: ['+'],
+  },
+  {
+    name: 'Zoom out',
+    keys: ['-'],
+  },
+  {
+    name: 'Fit to view',
+    keys: ['0'],
+  },
+  {
+    name: '50% Zoom',
+    keys: ['1'],
+  },
+  {
+    name: '75% Zoom',
+    keys: ['2'],
+  },
+]
+
+const Shortcuts = () => {
+  const [isMac, setIsMac] = useState(false)
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  useEffect(() => {
+    setIsMac(navigator.userAgent.toLowerCase().includes('mac'))
+  }, [])
+
+  let metaKey = isMac ? <Command /> : 'ctrl'
 
   return (
     <div className="mt-auto p-4">
@@ -18,6 +52,7 @@ const Shortcuts = (props: Props) => {
             setIsOpen((prev) => !prev)
           }}
           variant={'ghost'}
+          aria-expanded={isOpen}
         >
           Shortcuts
           <ChevronUp
@@ -28,26 +63,18 @@ const Shortcuts = (props: Props) => {
         </Button>
         {isOpen && (
           <ul className="flex flex-col gap-2 mt-2">
-            <li className="flex justify-between">
-              <span>Zoom in:</span>
-              <Kbd>ctrl/cmd + +</Kbd>
-            </li>
-            <li className="flex justify-between">
-              <span>Zoom out:</span>
-              <Kbd>ctrl/cmd + -</Kbd>
-            </li>
-            <li className="flex justify-between">
-              <span>Fit to view:</span>
-              <Kbd>ctrl/cmd + 0</Kbd>
-            </li>
-            <li className="flex justify-between">
-              <span>50% Zoom:</span>
-              <Kbd>ctrl/cmd + 1</Kbd>
-            </li>
-            <li className="flex justify-between">
-              <span>75% Zoom:</span>
-              <Kbd>ctrl/cmd + 2</Kbd>
-            </li>
+            {SHORTCUTS?.map((sCut) => (
+              <li key={sCut.name} className="flex justify-between">
+                <span>{sCut.name}:</span>
+                <div className="flex gap-1">
+                  <Kbd>{metaKey}</Kbd>
+                  <span>+</span>
+                  {sCut.keys?.map((k) => (
+                    <Kbd key={sCut?.name + k}>{k}</Kbd>
+                  ))}
+                </div>
+              </li>
+            ))}
           </ul>
         )}
       </div>

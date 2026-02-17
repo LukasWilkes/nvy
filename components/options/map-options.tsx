@@ -1,9 +1,16 @@
 'use client'
-import DitherOptionsForm from '@/features/dither/components/dither-options-form'
-import TintOptionsForm from '@/features/tint/components/tint-options-form'
+
 import { TEffectType } from '@/stores/useSidebarOptions'
+import dynamic from 'next/dynamic'
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
+
+const DitherOptionsForm = dynamic(
+  () => import('@/features/dither/components/dither-options-form')
+)
+const TintOptionsForm = dynamic(
+  () => import('@/features/tint/components/tint-options-form')
+)
 
 export const MAP_PARAMS_TO_OPTIONS: Record<
   TEffectType,
