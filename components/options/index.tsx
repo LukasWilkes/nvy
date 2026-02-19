@@ -7,10 +7,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import React from 'react'
 
-export const MAP_PARAMS_TO_OPTIONS: Record<
-  TEffectType,
-  React.ComponentType<any>
-> = {
+const MAP_PARAMS_TO_OPTIONS: Record<TEffectType, React.ComponentType<any>> = {
   tint: TintOptionsForm,
   dither: DitherOptionsForm,
 }

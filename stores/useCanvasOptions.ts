@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type TAvailableRatios =
+type TAvailableRatios =
   | 'instagram'
   | 'wallpaper'
   | '2k_wallpaper'

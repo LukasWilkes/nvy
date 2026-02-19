@@ -12,10 +12,7 @@ const TintOptionsForm = dynamic(
   () => import('@/features/tint/components/tint-options-form')
 )
 
-export const MAP_PARAMS_TO_OPTIONS: Record<
-  TEffectType,
-  React.ComponentType<any>
-> = {
+const MAP_PARAMS_TO_OPTIONS: Record<TEffectType, React.ComponentType<any>> = {
   tint: TintOptionsForm,
   dither: DitherOptionsForm,
 }

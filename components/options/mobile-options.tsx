@@ -29,6 +29,7 @@ const MobileSettings = () => {
       {isOpen && (
         <>
           <div
+            role={'button'}
             className="h-screen w-screen absolute bottom-full left-0 bg-white/00"
             onClick={() => {
               setIsOpen(null)

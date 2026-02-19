@@ -1,3 +1,20 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'nvy.app | Datenschutz',
+  description:
+    'Convert sketches into high-contrast, printable tattoo stencils using advanced dithering and threshold algorithms.',
+  authors: [{ name: 'Lukas Wilkes' }],
+  keywords: [
+    'Tattoo',
+    'Stencil',
+    'Dithering',
+    'Image Processing',
+    'Next.js',
+    'P5.js',
+  ],
+}
+
 const PrivacyPage = () => {
   return (
     <section className="text-foreground flex flex-col gap-8 font-mono text-sm max-w-4xl mx-auto w-full">
