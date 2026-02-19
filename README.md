@@ -42,3 +42,4 @@ In diesem Projekt ging es mir vor allem darum neue interessante Dinge auszuprobi
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+[![React Doctor](https://www.react.doctor/share/badge?p=nvy&s=93&w=39&f=23)](https://www.react.doctor/share?p=nvy&s=93&w=39&f=23)
