@@ -25,8 +25,9 @@ Ein minimalistisches, browserbasiertes Werkzeug zur Bildmanipulation, das versch
 ## Lokale Installation
 
 1. Repository klonen: `git clone https://github.com/LukasWilkes/nvy.git`
-2. Abhängigkeiten installieren: `npm install`
-3. Entwicklungsserver starten: `npm run dev`
+2. In den Ordner wechseln `cd nvy`
+3. Abhängigkeiten installieren: `npm install`
+4. Entwicklungsserver starten: `npm run dev`
 
 ## Key Learnings
 
