@@ -3,14 +3,13 @@ import { Field, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
 import useSidebarOptions from '@/stores/useSidebarOptions'
-import { useState } from 'react'
 
 const StandardDitherForm = () => {
   const { settings, updateSettings } = useSidebarOptions()
 
   const standardThresholdDither = settings['dither']?.standard
 
-  const updateStandardDither = (option: string, value: any) => {
+  const updateStandardDither = (option: string, value: unknown) => {
     setTimeout(() => {
       updateSettings('dither', {
         standard: { ...standardThresholdDither, [option]: value },
@@ -18,7 +17,6 @@ const StandardDitherForm = () => {
     }, 100)
   }
 
-  const [test, setTest] = useState([0, 63, 127, 191, 255])
   return (
     <div className="flex flex-col gap-8 font-mono">
       <div>

@@ -9,7 +9,7 @@ import { InfoIcon } from 'lucide-react'
 const ViewPortOptions = () => {
   return (
     <>
-      <div className="bg-sidebar/80 px-4 backdrop-blur-md lg:hidden h-14 absolute top-0 left-0 w-full border-b text-muted-foreground flex font-mono text-xs items-center justify-center px-6 z-50">
+      <div className="bg-sidebar/80 backdrop-blur-md lg:hidden h-14 absolute top-0 left-0 w-full border-b text-muted-foreground flex font-mono text-xs items-center justify-center px-6 z-50">
         <p className="leading-tight flex gap-3 items-center">
           <span className="mr-2">
             <InfoIcon />

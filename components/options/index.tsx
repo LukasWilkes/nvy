@@ -25,7 +25,7 @@ const Options = () => {
 
   const Component = MAP_PARAMS_TO_OPTIONS[effectType!]
   return (
-    <aside className="sticky  top-0 w-80 right-0 hidden lg:flex font-mono flex-col border-l h-[100svh] flex-none bg-sidebar text-foreground">
+    <aside className="sticky  top-0 w-80 right-0 hidden lg:flex font-mono flex-col border-l h-svh flex-none bg-sidebar text-foreground">
       <Component type={effectType} />
       <div className="p-4 border-t mt-auto">
         <ul className="p-4 flex justify-between flex-col gap-2 text-sm border bg-input/30">

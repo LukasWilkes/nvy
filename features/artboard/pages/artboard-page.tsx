@@ -1,6 +1,5 @@
-import Canvas from '@/components/canvas'
+import Canvas from '@/features/canvas/components'
 import ViewPortOptions from '@/features/view-port-settings/components'
-import React from 'react'
 
 type Props = {}
 
