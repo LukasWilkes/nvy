@@ -13,14 +13,6 @@ import { Field, FieldGroup } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from '@/components/ui/popover'
-import {
   Select,
   SelectContent,
   SelectItem,
@@ -28,8 +20,8 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import useViewPortOptions from '@/stores/useViewPortOptions'
-import { ChevronDown, Share } from 'lucide-react'
-import React, { useState } from 'react'
+import { Share } from 'lucide-react'
+import { useState } from 'react'
 
 type Props = {}
 

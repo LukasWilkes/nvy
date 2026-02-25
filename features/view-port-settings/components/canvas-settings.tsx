@@ -12,7 +12,7 @@ import {
 import { RatioIcon } from 'lucide-react'
 
 const CanvasSettings = () => {
-  const { updateRatio, ratio } = useCanvasOptions((state) => state)
+  const { updateRatio } = useCanvasOptions((state) => state)
   return (
     <Popover>
       <PopoverTrigger asChild>

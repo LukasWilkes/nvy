@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import useSidebarOptions from '@/stores/useSidebarOptions'
 import { ImageIcon } from 'lucide-react'
-import { useRef } from 'react'
+import { ChangeEvent, ChangeEventHandler, InputEvent, useRef } from 'react'
 
 import { toast } from 'sonner'
 
@@ -9,9 +9,9 @@ const ImageUpload = () => {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const updateImageUrl = useSidebarOptions((state) => state.updateImageUrl)
 
-  const handleFileUpload = (e: any) => {
+  const handleFileUpload = (e: ChangeEvent<HTMLInputElement>) => {
     try {
-      const file = e.target.files[0]
+      const file = e.target.files?.[0]
 
       if (!file) return
 

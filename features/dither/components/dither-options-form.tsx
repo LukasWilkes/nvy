@@ -1,18 +1,9 @@
-import ImageUpload from '@/components/options/fields/image-upload'
-import { Slider } from '@/components/ui/slider'
-import useSidebarOptions, {
-  TEffects,
-  TEffectType,
-} from '@/stores/useSidebarOptions'
-import { Eclipse } from 'lucide-react'
-import React from 'react'
+import useSidebarOptions, { TEffectType } from '@/stores/useSidebarOptions'
 import StandardDitherForm from './standard-dither-form'
 
 type TDitherOptionsForm = {
   type: TEffectType
 }
-
-const ditherTypes = ['standard', 'floyd_steinberg']
 
 const MAP_DITHER_TYPE_TO_FORM = {
   standard: StandardDitherForm,

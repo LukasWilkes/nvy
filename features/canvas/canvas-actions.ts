@@ -1,3 +1,4 @@
+import { TEffects } from '@/stores/useSidebarOptions'
 import { P5CanvasInstance } from '@p5-wrapper/react'
 import { ditherServcie } from '../dither/dither-service'
 import { TBaseProps, TSettings } from './canvas-types'
@@ -74,7 +75,7 @@ export const applyEffects = async (
   currentProps: TBaseProps & { imageFormat: 'png' | 'jpg' },
   img: any
 ) => {
-  const settings: any =
+  const settings =
     currentProps?.type === 'default'
       ? null
       : currentProps?.settings[currentProps?.type]
@@ -82,7 +83,7 @@ export const applyEffects = async (
   if (settings) {
     switch (currentProps?.type) {
       case 'tint':
-        const { color } = settings
+        const { color } = settings as TEffects['tint']
         if (color) {
           p5.tint(color[0], color[1], color[2])
         }

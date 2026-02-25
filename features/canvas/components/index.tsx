@@ -1,10 +1,6 @@
 'use client'
 
-import {
-  applyEffects,
-  handleShortcuts,
-  handleWheel,
-} from '@/features/canvas/canvas-actions'
+import { applyEffects } from '@/features/canvas/canvas-actions'
 
 import {
   initialBaseProps,
@@ -20,7 +16,6 @@ import useViewPortOptions from '@/stores/useViewPortOptions'
 import { NextReactP5Wrapper } from '@p5-wrapper/next'
 import { Sketch } from '@p5-wrapper/react'
 import { useSearchParams } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
 
 const sketch: Sketch<TSettings> = (p5) => {
   let img: any | null
@@ -84,13 +79,13 @@ const sketch: Sketch<TSettings> = (p5) => {
 }
 
 const Canvas = () => {
-  const { translate, zoom, onWheel, ref } = useArtboard()
+  const { translate, zoom, ref } = useArtboard()
 
   const { width, height } = useCanvasOptions((state) => state)
   const { settings: viewPortSettings, save } = useViewPortOptions(
     (state) => state
   )
-  const { imageUrl, settings, effectVariant }: any = useSidebarOptions(
+  const { imageUrl, settings, effectVariant } = useSidebarOptions(
     (state) => state
   )
 
